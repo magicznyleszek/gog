@@ -1,0 +1,20 @@
+.button {
+    cursor: pointer;
+    display: inline-block;
+    color: $white;
+    background-color: $baseColor;
+    line-height: 2rem;
+    padding: 0 0.5rem;
+    text-decoration: none;
+    border: 0;
+    border-bottom: 0.125rem solid $baseColorDark;
+    &:hover {
+        background-color: $baseColorLight;
+        border-color: $baseColor;
+    }
+    &.button-big {
+        font-size: 1.5rem;
+        line-height: 3rem;
+        padding: 0 0.75rem;
+    }
+}
