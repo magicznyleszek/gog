@@ -3,14 +3,14 @@ body {
 }
 
 a {
-    color: $baseColor;
+    color: $crimson;
     outline: none;
     text-decoration: underline;
     &:visited {
-        color: $baseColorDark;
+        color: $crimsonDark;
     }
     &:hover {
-        color: $baseColorLight;
+        color: $crimsonLight;
         text-decoration: none;
     }
 }
@@ -24,7 +24,7 @@ nav {
 }
 
 :focus {
-    outline-color: $baseColor;
+    outline-color: $crimson;
     outline-style: auto;
     outline-width: 0.25rem;
 }
@@ -39,12 +39,12 @@ img, svg, embed, object, video {
 
 ::selection {
     color: $white;
-    background-color: $baseColor;
+    background-color: $crimson;
 }
 
 ::-moz-selection {
     color: $white;
-    background-color: $baseColor;
+    background-color: $crimson;
 }
 
 table {

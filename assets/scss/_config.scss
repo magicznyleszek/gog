@@ -1,15 +1,4 @@
 // --------------------------------------------------
-// modular scale
-// 4, 5, 8, 10, 16, 20, 32, 40, 64, 80, 128, 160, 256, 320, 512, 640, 1024, 1280, 2048, 2560
-// --------------------------------------------------
-
-$scaleMain: 16;
-$scaleSecondary: 20;
-$scaleFraction: 1 / 2;
-$scaleFractionInverse: 1 / $scaleFraction;
-
-
-// --------------------------------------------------
 // typography and breakpoints font sizes
 // --------------------------------------------------
 
@@ -41,11 +30,6 @@ $sandstoneDark: shade($sandstone, 45);
 $sandstoneDarker: shade($sandstone, 90);
 $sandstoneLight: tint($sandstone, 60);
 $sandstoneLighter: tint($sandstone, 90);
-
-// main declarations (for easier change)
-$baseColor: $crimson;
-$baseColorDark: $crimsonDark;
-$baseColorLight: $crimsonLight;
 
 
 // --------------------------------------------------
