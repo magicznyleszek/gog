@@ -7,8 +7,8 @@ gogApp.config(['$routeProvider', function ($routeProvider) {
         templateUrl: 'app/views/bundle.html',
         controller: 'BundleController',
         resolve: {
-            'BundlesData': function (Bundles) {
-                return Bundles.promise;
+            'BundleData': function (Bundle) {
+                return Bundle.promise;
             }
         }
     })

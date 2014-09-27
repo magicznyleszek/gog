@@ -1,0 +1,37 @@
+[
+    {
+        "slug": "divinity-2-dc-features-and-fixes",
+        "limit": "10000",
+        "label": "10.000",
+        "description": "video detailing new features and fixes in Developer’s Cut of Divinity&nbsp;2",
+        "url": "null"
+    },
+    {
+        "slug": "divinity-original-sin-trailer",
+        "limit": "25000",
+        "label": "25.000",
+        "description": "exclusive, never before seen, trailer from Divinity: Original Sin.",
+        "url": "null"
+    },
+    {
+        "slug": "kingdom-of-plants-trailer",
+        "limit": "50000",
+        "label": "50.000",
+        "description": "trailer for documentary about intelligent plants with David Attenborough.",
+        "url": "https://www.youtube.com/watch?v=ofxCVJvHqj0"
+    },
+    {
+        "slug": "italian-spiderman-movie-episode-1",
+        "limit": "80000",
+        "label": "80.000",
+        "description": "non-exclusive Italian Spiderman Movie &ndash; Episode&nbsp;1",
+        "url": "http://www.youtube.com/watch?v=JvNLlwkwP64"
+    },
+    {
+        "slug": "music-animation-machine-j-s-bach",
+        "limit": "120000",
+        "label": "120.000",
+        "description": "Music Animation Machine presents J.&nbsp;S.&nbsp;Bach's Toccata and Fugue in D&nbsp;Minor",
+        "url": "https://www.youtube.com/watch?v=ipzR9bhei_o"
+    }
+]

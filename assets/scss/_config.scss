@@ -2,13 +2,14 @@
 // typography and breakpoints font sizes
 // --------------------------------------------------
 
-$source: "Source Sans Pro", sans-serif;
-$code: "Source Code Pro", monospace;
+$open: "Open Sans", sans-serif;
+$code: monospace;
+$digital: "DS Digital Bold";
 
 $baseFontWeight: 400;
 $baseFontSize: 20px;
 $baseLineHeight: 1.5;
-$baseFontFamily: $source;
+$baseFontFamily: $open;
 
 $fontSizeBig: 24px;
 $fontSizeSmall: 16px;
