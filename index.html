@@ -35,22 +35,27 @@
     <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png?version=1">
 
     <!-- fonts -->
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic&subset=latin,latin-ext" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic&subset=latin,latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
     <!-- vendors -->
     <script src="vendors/angular.min.js"></script>
+    <script src="vendors/angular-route.min.js"></script>
     <script src="vendors/angular-animate.min.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script> -->
     <script>window.jQuery || document.write('<script src="vendors\/jquery-1.11.1.min.js"><\/script>')</script>
 
     <!-- angular app -->
     <script src="app/app.js"></script>
+    <script src="app/controllers.js"></script>
+    <script src="app/directives.js"></script>
+    <script src="app/routes.js"></script>
+    <script src="app/services.js"></script>
 
 </head>
 
-<body ng-controller="BundleController as bundle">
+<body>
 
     <!-- header -->
     <header class="app-header">
@@ -60,119 +65,6 @@
     <!-- content -->
     <section class="app-content" role="main">
         <div ng-view></div>
-    </section>
-    
-    <section class="site-content" role="main">
-
-        <article class="route">
-
-            <header class="route-header">
-
-                <h1>Pay what yoy want for the <strong>Divinity Bundle</strong> ($32 value!)</h1>
-
-                <ul am-list="blank inline">
-                    <li>
-                        <i am-icon="heart"></i> <span class="inline-block">Support Larian Studios</span>
-                    </li><!--
-                 --><li>
-                        <i am-icon="mouse"></i> <span class="inline-block">Play Divinity&nbsp;2:&nbsp;DC before release</span>
-                    </li><!--
-                 --><li>
-                        <i am-icon="padlock"></i> <span class="inline-block">Play Divinity&nbsp;2:&nbsp;DC before release</span>
-                    </li><!--
-                 --><li>
-                        <span am-button="fake unimportant">
-                            <i am-icon="clock"></i> <span class="inline-block">Play Divinity&nbsp;2:&nbsp;DC before release</span>
-                        </span>
-                    </li>
-                </ul>
-
-            </header>
-
-            <section am-box="rounded lighted shadowed">
-
-                <div class="bundle-info">
-
-                </div>
-
-                <div class="bundle-actions">
-
-                </div>
-
-            </section>
-
-            <footer class="route-footer">
-
-                <div am-column="2/3">
-
-                    <header am-header="lined centered">
-                        <h2>Goodies available for free with Divinity Bundle</h2>
-                    </header>
-
-                    <ul am-list="blank inline">
-                        <li am-column="1/3">
-                            <i am-icon="music"></i>
-                            <h4>4&nbsp;soundtracks</h4>
-                            <p>Over 3&nbsp;hours of award winning music from all 3&nbsp;games.</p>
-                        </li><!--
-                     --><li am-column="1/3">
-                            <i am-icon="notepad"></i>
-                            <h4>2&nbsp;short stories</h4>
-                            <p>Prequel story for Divine Divinity and Beyond Divinity novella.</p>
-                        </li><!--
-                     --><li am-column="1/3">
-                            <i am-icon="book"></i>
-                            <h4>Divinity&nbsp;2 &ndash; Dev Journal</h4>
-                            <p>144&nbsp;pages long book, detailing story and art of Divinity&nbsp;2.</p>
-                        </li><!--
-                     --><li am-column="1/3">
-                            <i am-icon="movie"></i>
-                            <h4>Making of Divinity&nbsp;2</h4>
-                            <p>40&nbsp;minutes long, profesional documentary about the development of Divinity&nbsp;2.</p>
-                        </li><!--
-                     --><li am-column="1/3">
-                            <i am-icon="imac"></i>
-                            <h4>7&nbsp;wallpapers</h4>
-                            <p>Beatifull, hand crafted HD wallpepers with Divine, Beyond and Divinity&nbsp;2 art.</p>
-                        </li><!--
-                     --><li am-column="1/3">
-                            <i am-icon="zip"></i>
-                            <h4>&hellip;and more</h4>
-                            <p>3&nbsp;manuals, 56&nbsp;artworks, 5&nbsp;avatars, Beyond Divinity game-guide.</p>
-                        </li>
-                    </ul>
-
-                </div><!--
-             --><div am-column="1/3">
-
-                    <header am-header="lined centered">
-                        <h2>Games sold so far</h2>
-                    </header>
-
-                    <section class="bundle-counter">
-
-                        <!-- hundred thousands, ten thousands and thousands -->
-                        <span am-counter="thousands">654</span>
-                        <span>.</span>
-                        <!-- hundreds, tens and ones -->
-                        <span am-counter="hundreds">321</span>
-
-                    </section>
-
-                    <h4>Reach 25.000&hellip;</h4>
-
-                    <p>&hellip;to unlock exclusive, never before seen, trailer from Divinity: Original Sin.</p>
-
-                    <div class="slider">
-
-                    </div>
-
-                </div>
-
-            </footer>
-
-        </article>
-
     </section>
 
     <!-- footer -->
