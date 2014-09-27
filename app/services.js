@@ -4,12 +4,13 @@ gogApp.service('Bundles', ['$http', function ($http) {
     var myData = null;
 
     // get data from JSON
-    $http.get('app/data/bundles.json').success(function (data) {
+    var promise = $http.get('app/data/bundles.json').success(function (data) {
         myData = data;
     });
 
     // return object
     return {
+        promise: promise,
         getAll: function () {
             return myData;
         }

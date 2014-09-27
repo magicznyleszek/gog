@@ -5,7 +5,12 @@ gogApp.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
     .when('/', {
         templateUrl: 'app/views/bundle.html',
-        controller: 'BundleController'
+        controller: 'BundleController',
+        resolve: {
+            'BundlesData': function (Bundles) {
+                return Bundles.promise;
+            }
+        }
     })
     .otherwise({
         redirectTo: '/'
