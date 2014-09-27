@@ -1,0 +1,14 @@
+<div>
+    <p>{{ 'HEADLINE_BOOKS' | translate | widowsOrphans }}</p>
+
+    <ul ng-repeat="book in books | orderBy:'title|translate'">
+        <li><i>{{ book.author }}</i></li>
+        <li><strong><a href="{{ book.url }}">{{ book.title | translate | widowsOrphans }}</p></a></strong></li>
+        <li>
+            <ul ng-repeat="(key, value) in book.details">
+                <li>{{ key | translate | widowsOrphans }} - {{ value | translate | widowsOrphans }}</li>
+            </ul>
+        </li>
+    </ul>
+
+</div>
