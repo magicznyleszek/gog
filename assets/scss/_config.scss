@@ -11,9 +11,6 @@ $baseFontSize: 20px;
 $baseLineHeight: 1.5;
 $baseFontFamily: $open;
 
-$fontSizeBig: 24px;
-$fontSizeSmall: 16px;
-
 
 // --------------------------------------------------
 // colors
@@ -31,6 +28,34 @@ $sandstoneDark: shade($sandstone, 45);
 $sandstoneDarker: shade($sandstone, 90);
 $sandstoneLight: tint($sandstone, 60);
 $sandstoneLighter: tint($sandstone, 90);
+
+// #d4d4d4 // app bg, 
+// #404040 // base header text
+// #4c4c4c // footer header text, bundle price text, slider limits text
+// #bfbfbf // footer header line, counter bg bottom
+// #333333 // base text
+// #666666 // footer text, bundle price icon
+// #656565 // counter text
+// #a6a6a6 // fake button stroke, counter bg top, slideshow nav stroke, slideshow nav active bg top
+// #608000 // bundle green
+// #739900 // bundle green icon
+// #a6c500 // button green bg top
+// #6c9600 // button green bg bottom
+// #03101a // button text
+// #808080 // slider text
+// #e1e1e1 // bundle header bg
+// #f2f2f2 // slider handle bg top
+// #d0d0d0 // slider handle bg bottom
+// #9d9d9d // slider handle stroke
+// #c8c8c8 // slider label bg
+// #e5e5e5 // bundle footer bg
+// #c1c1c1 // bundle header hr
+// #cdcdcd // bundle hr, slider bg
+// #aaaaaa // slider stroke
+// #ededed // slideshow arrow bg top
+// #d7d7d7 // slideshow arrow bg bottom
+// #cbcbcb // slideshow nav bg
+// #d9d9d9 // slideshow nav active bg bottom
 
 
 // --------------------------------------------------
