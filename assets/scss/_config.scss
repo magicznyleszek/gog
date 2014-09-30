@@ -29,33 +29,33 @@ $sandstoneDarker: shade($sandstone, 90);
 $sandstoneLight: tint($sandstone, 60);
 $sandstoneLighter: tint($sandstone, 90);
 
-// #d4d4d4 // app bg, 
-// #404040 // base header text
-// #4c4c4c // footer header text, bundle price text, slider limits text
-// #bfbfbf // footer header line, counter bg bottom
-// #333333 // base text
-// #666666 // footer text, bundle price icon
-// #656565 // counter text
-// #a6a6a6 // fake button stroke, counter bg top, slideshow nav stroke, slideshow nav active bg top
-// #608000 // bundle green
-// #739900 // bundle green icon
-// #a6c500 // button green bg top
-// #6c9600 // button green bg bottom
-// #03101a // button text
-// #808080 // slider text
-// #e1e1e1 // bundle header bg
-// #f2f2f2 // slider handle bg top
-// #d0d0d0 // slider handle bg bottom
-// #9d9d9d // slider handle stroke
-// #c8c8c8 // slider label bg
-// #e5e5e5 // bundle footer bg
-// #c1c1c1 // bundle header hr
-// #cdcdcd // bundle hr, slider bg
-// #aaaaaa // slider stroke
-// #ededed // slideshow arrow bg top
-// #d7d7d7 // slideshow arrow bg bottom
-// #cbcbcb // slideshow nav bg
-// #d9d9d9 // slideshow nav active bg bottom
+$lightGray: rgb(212, 212, 212); // #d4d4d4 // app bg,
+$charcoal: rgb(64, 64, 64); // #404040 // base header text
+$charcoal: rgb(76, 76, 76); // #4c4c4c // footer header text, bundle price text, slider limits text
+$silver: rgb(191, 191, 191); // #bfbfbf // footer header line, counter bg bottom
+$nightRider: rgb(51, 51, 51); // #333333 // base text
+$dimGray: rgb(102, 102, 102); // #666666 // footer text, bundle price icon
+$dimGray: rgb(101, 101, 101); // #656565 // counter text
+$darkGray: rgb(166, 166, 166); // #a6a6a6 // fake button stroke, counter bg top, slideshow nav stroke, slideshow nav active bg top
+$olive: rgb(96, 128, 0); // #608000 // bundle green
+$olive: rgb(115, 153, 0); // #739900 // bundle green icon
+$citrus: rgb(166, 197, 0); // #a6c500 // button green bg top
+$olive: rgb(108, 150, 0); // #6c9600 // button green bg bottom
+$darkGreen: rgb(3, 16, 26); // #03101a // button text
+$grey: rgb(128, 128, 128); // #808080 // slider text
+$gainsboro: rgb(225, 225, 225); // #e1e1e1 // bundle header bg
+$whiteSmoke: rgb(242, 242, 242); // #f2f2f2 // slider handle bg top
+$lightGray: rgb(208, 208, 208); // #d0d0d0 // slider handle bg bottom
+$darkGray: rgb(157, 157, 157); // #9d9d9d // slider handle stroke
+$veryLightGray: rgb(200, 200, 200); // #c8c8c8 // slider label bg
+$gainsboro: rgb(229, 229, 229); // #e5e5e5 // bundle footer bg
+$silver: rgb(193, 193, 193); // #c1c1c1 // bundle header hr
+$veryLightGray: rgb(205, 205, 205); // #cdcdcd // bundle hr, slider bg
+$darkGray: rgb(170, 170, 170); // #aaaaaa // slider stroke
+$whiteSmoke: rgb(237, 237, 237); // #ededed // slideshow arrow bg top
+$lightGray: rgb(215, 215, 215); // #d7d7d7 // slideshow arrow bg bottom
+$veryLightGray: rgb(203, 203, 203); // #cbcbcb // slideshow nav bg
+$gainsboro: rgb(217, 217, 217); // #d9d9d9 // slideshow nav active bg bottom
 
 
 // --------------------------------------------------
