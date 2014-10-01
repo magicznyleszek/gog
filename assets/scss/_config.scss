@@ -1,79 +1,35 @@
-// --------------------------------------------------
-// typography and breakpoints font sizes
-// --------------------------------------------------
-
+// typography and font sizes for breakpoints
 $open: "Open Sans", sans-serif;
 $code: monospace;
 $digital: "DS Digital Bold";
+$fontSizeMedium: 12px;
 
-$baseFontWeight: 400;
-$baseFontSize: 20px;
-$baseLineHeight: 1.5;
-$baseFontFamily: $open;
-
-
-// --------------------------------------------------
-// colors
-// --------------------------------------------------
-
+// base colors
 $black: rgb(0,0,0);
 $white: rgb(255,255,255);
 
-$crimson: rgb(240,20,60);
-$crimsonDark: shade($crimson, 15);
-$crimsonLight: tint($crimson, 30);
+// additional colors -- grays
+$whiteSmoke: rgb(240, 240, 240); // slider handle bg top, slideshow arrow bg top
+$gainsboro: rgb(225, 225, 225); // bundle bg, slideshow nav active bg bottom
+$veryLightGray: rgb(212, 212, 212); // slideshow arrow bg bottom, app bg, slider handle bg bottom
+$lightGray: rgb(203, 203, 203); // slideshow nav bg, slider bg, slider label bg
+$silver: rgb(191, 191, 191); // bundle hr, bundle header hr (0.5), footer header line, counter bg bottom
+$gray: rgb(166, 166, 166); // slider stroke, slider handle stroke, fake button stroke, counter bg top, slideshow nav stroke, slideshow nav active bg top
+$darkGray: rgb(128, 128, 128); // slider text
+$dimGray: rgb(102, 102, 102); // footer text, bundle price icon, bundle price text, slider limits text
+$nightRider: rgb(51, 51, 51); // base text
 
-$sandstone: rgb(120,110,100);
-$sandstoneDark: shade($sandstone, 45);
-$sandstoneDarker: shade($sandstone, 90);
-$sandstoneLight: tint($sandstone, 60);
-$sandstoneLighter: tint($sandstone, 90);
+// additional colors -- greens
+$citrus: rgb(166, 197, 0); // button green bg top
+$olive: rgb(108, 150, 0); // button green bg bottom, bundle green icon, bundle green text
+$darkGreen: rgb(3, 16, 26); // button text
 
-$whiteSmoke: rgb(242, 242, 242); // #f2f2f2 // slider handle bg top
-$whiteSmoke: rgb(237, 237, 237); // #ededed // slideshow arrow bg top
-$gainsboro: rgb(229, 229, 229); // #e5e5e5 // bundle footer bg
-$gainsboro: rgb(225, 225, 225); // #e1e1e1 // bundle header bg
-$gainsboro: rgb(217, 217, 217); // #d9d9d9 // slideshow nav active bg bottom
-$lightGray: rgb(212, 212, 212); // #d4d4d4 // app bg,
-$lightGray: rgb(215, 215, 215); // #d7d7d7 // slideshow arrow bg bottom
-$lightGray: rgb(208, 208, 208); // #d0d0d0 // slider handle bg bottom
-$veryLightGray: rgb(205, 205, 205); // #cdcdcd // bundle hr, slider bg
-$veryLightGray: rgb(203, 203, 203); // #cbcbcb // slideshow nav bg
-$veryLightGray: rgb(200, 200, 200); // #c8c8c8 // slider label bg
-$silver: rgb(193, 193, 193); // #c1c1c1 // bundle header hr
-$silver: rgb(191, 191, 191); // #bfbfbf // footer header line, counter bg bottom
-$darkGray: rgb(170, 170, 170); // #aaaaaa // slider stroke
-$darkGray: rgb(166, 166, 166); // #a6a6a6 // fake button stroke, counter bg top, slideshow nav stroke, slideshow nav active bg top
-$darkGray: rgb(157, 157, 157); // #9d9d9d // slider handle stroke
-$grey: rgb(128, 128, 128); // #808080 // slider text
-$dimGray: rgb(102, 102, 102); // #666666 // footer text, bundle price icon
-$dimGray: rgb(101, 101, 101); // #656565 // counter text
-$charcoal: rgb(76, 76, 76); // #4c4c4c // footer header text, bundle price text, slider limits text
-$charcoal: rgb(64, 64, 64); // #404040 // base header text
-$nightRider: rgb(51, 51, 51); // #333333 // base text
-$olive: rgb(96, 128, 0); // #608000 // bundle green
-$olive: rgb(115, 153, 0); // #739900 // bundle green icon
-$olive: rgb(108, 150, 0); // #6c9600 // button green bg bottom
-$citrus: rgb(166, 197, 0); // #a6c500 // button green bg top
-$darkGreen: rgb(3, 16, 26); // #03101a // button text
-
-
-
-
-// --------------------------------------------------
-// breakpoints and content widths settings
-// --------------------------------------------------
-
-// $breakBig: 1280px;
-// $breakSmall: 640px;
-
+// breakpoints and content widths
+$breakBig: 1280px;
+$breakSmall: 640px;
 $appContentWidth: 950px;
 
-
-// --------------------------------------------------
 // speed
-// --------------------------------------------------
-
 $fastest: 0.125s;
 $faster: 0.25s;
 $fast: 0.5s;
@@ -81,9 +37,9 @@ $slow: 1s;
 $slower: 1.5s;
 $slowest: 2s;
 
-
-// --------------------------------------------------
 // images
-// --------------------------------------------------
-
 $grayNoisePattern: url("../img/gray-noise-pattern.png");
+
+// z-indexes
+$zIndex0: -1;
+$zIndex1: 10;

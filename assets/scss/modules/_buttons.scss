@@ -1,20 +1,44 @@
-.button {
+[am-button] {
     cursor: pointer;
     display: inline-block;
-    color: $white;
-    background-color: $crimson;
-    line-height: 2rem;
-    padding: 0 0.5rem;
+    padding: 0 rem(12px);
     text-decoration: none;
-    border: 0;
-    border-bottom: 0.125rem solid $crimsonDark;
+    font-size: rem(13px);
+    font-weight: 600;
+    line-height: rem(36px);
+    color: $nightRider;
+    background-color: $whiteSmoke;
+    @include gradientVertical($whiteSmoke, $veryLightGray);
+    @include box-shadow(0 rem(1px) rem(2px) rem(-1px) rgba($black, 1), inset 0 rem(1px) 0 0 rgba($white, 0.5), inset 0 rem(3px) rem(6px) 0 rgba($white, 0.25));
+    border-width: rem(1px);
+    border-style: solid;
+    border-color: $gray;
+    @include border-radius(rem(5px));
     &:hover {
-        background-color: $crimsonLight;
-        border-color: $crimson;
+        background-color: $white;
+        @include gradientVertical($white, $gainsboro);
     }
-    &.button-big {
-        font-size: 1.5rem;
-        line-height: 3rem;
-        padding: 0 0.75rem;
+}
+[am-button~="important"] {
+    @include text-shadow(0 rem(1px) 0 rgba($white, 0.333));
+    color: $darkGreen;
+    background-color: $olive;
+    @include gradientVertical($citrus, $olive);
+    border-color: shade($olive, 25);
+    &:hover {
+        background-color: $citrus;
+        @include gradientVertical(tint($citrus, 25), rgba($olive, 0.75));
     }
+}
+[am-button~="unimportant"] {
+    @include box-shadow(0 0 0 0 transparent);
+    font-weight: 400;
+    background: rgba($black, 0.03);
+    &:hover {
+        background: $gainsboro;
+    }
+}
+[am-button~="fake"] {
+    cursor: default;
+    pointer-events: none;
 }

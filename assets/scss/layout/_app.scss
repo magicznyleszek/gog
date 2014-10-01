@@ -1,3 +1,38 @@
 [ng-app] body {
-    background: red $grayNoisePattern 0 0 repeat;
+    background: $veryLightGray $grayNoisePattern 0 0 repeat;
+    &:before {
+        content: '';
+        display: block;
+        @include absolute(top 0 left 0);
+        z-index: $zIndex0;
+        width: 100%;
+        height: rem(320px);
+        @include gradientVertical(rgba($black, 0.35), rgba($veryLightGray, 0));
+    }
+}
+
+header.app-header {
+    @include column();
+    min-height: rem(60px);
+    background: $gainsboro;
+    @include box-shadow(0 rem(1px) rem(6px) rgba($black, 0.333));
+}
+
+section.app-content {
+    max-width: rem($appContentWidth);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer.app-footer {
+    @include column();
+    min-height: rem(60px);
+    padding-top: rem(24px);
+    padding-bottom: rem(24px);
+    text-align: center;
+    color: $gray;
+    background: $nightRider;
+    a {
+        color: $gray;
+    }
 }

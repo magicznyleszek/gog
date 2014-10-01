@@ -1,0 +1,11 @@
+[am-list] {
+
+}
+[am-list~="inline"] {
+    > li {
+        display: inline-block;
+    }
+}
+[am-list~="blank"] {
+
+}

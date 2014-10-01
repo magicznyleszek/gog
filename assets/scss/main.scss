@@ -44,9 +44,7 @@
 // --------------------------------------------------
 
 @import "layout/app";
-@import "layout/header";
-@import "layout/content";
-@import "layout/footer";
+@import "layout/columns";
 
 
 // --------------------------------------------------
@@ -55,6 +53,7 @@
 
 @import "modules/buttons";
 @import "modules/icons";
+@import "modules/lists";
 
 
 // --------------------------------------------------
@@ -69,4 +68,3 @@
 // --------------------------------------------------
 
 @import "themes/form-default";
-@import "themes/table-default";

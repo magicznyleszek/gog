@@ -1,20 +1,23 @@
 body {
     min-height: 100%;
+    color: $nightRider;
 }
-
 a {
-    color: $crimson;
+    color: $nightRider;
     outline: none;
-    text-decoration: underline;
+    text-decoration: none;
+    border-bottom-width: rem(1px);
+    border-style: dotted;
     &:visited {
-        color: $crimsonDark;
+        //
     }
     &:hover {
-        color: $crimsonLight;
-        text-decoration: none;
+        border-style: solid;
+    }
+    &:active {
+        color: $olive;
     }
 }
-
 nav {
     ul, ol {
         list-style: none;
@@ -22,35 +25,28 @@ nav {
         padding: 0;
     }
 }
-
 :focus {
-    outline-color: $crimson;
+    outline-color: $olive;
     outline-style: auto;
     outline-width: 0.25rem;
 }
-
 ::-moz-focus-inner {
     border: 0;
 }
-
 img, svg, embed, object, video {
     max-width: 100%;
 }
-
 ::selection {
     color: $white;
-    background-color: $crimson;
+    background-color: $olive;
 }
-
 ::-moz-selection {
     color: $white;
-    background-color: $crimson;
+    background-color: $olive;
 }
-
 table {
     width: 100%;
 }
-
 form {
     input, select, textarea, button {
         font: inherit;
