@@ -1,0 +1,15 @@
+[am-box] {
+    //
+}
+[am-box~="white"] {
+    background-color: $white;
+}
+[am-box~="gainsboro"] {
+    background-color: $gainsboro;
+}
+[am-box~="rounded"] {
+    @include border-radius(rem(4px));
+}
+[am-box~="shadowed"] {
+    @include box-shadow(0 rem(1px) rem(4px) rem(-1px) rgba($black, 0.333), inset 0 rem(1px) 0 0 rgba($white, 0.5));
+}

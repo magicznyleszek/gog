@@ -5,7 +5,9 @@
         "url": "http://www.gog.com/game/divine_divinity",
         "price": "$5.99",
         "preorder": "false",
-        "includes": "6 goodies and 4 language versions"
+        "includes": "6 goodies and 4 language versions",
+        "availabilityLabel": "Below average",
+        "availability": false
     },
     {
         "slug": "beyond-divinity",
@@ -13,7 +15,9 @@
         "url": "http://www.gog.com/game/beyond_divinity",
         "price": "$5.99",
         "preorder": "false",
-        "includes": "6 goodies and 4 language versions"
+        "includes": "6 goodies and 4 language versions",
+        "availabilityLabel": "Above average <span>X</span>",
+        "availability": false
     },
     {
         "slug": "divinity-2-dc",
@@ -21,6 +25,8 @@
         "url": "http://www.gog.com/game/divinity_2_developers_cut",
         "price": "$5.99",
         "preorder": "true",
-        "includes": "6 goodies and 4 language versions"
+        "includes": "6 goodies and 4 language versions",
+        "availabilityLabel": "Top suporter <span>X</span>",
+        "availability": false
     }
 ]

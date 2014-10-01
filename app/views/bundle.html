@@ -2,7 +2,7 @@
 
     <h1>Pay what you want for the <strong>Divinity Bundle</strong> ($32 value!)</h1>
 
-    <ul am-list="blank inline">
+    <ul am-list="blank">
         <li>
             <svg am-icon><use xlink:href="#icon-heart"></svg> <span class="inline-block">Support Larian Studios</span>
         </li><!--
@@ -21,10 +21,19 @@
 
 </header>
 
-<section am-box="rounded lighted shadowed">
+<section class="view-content" am-box="rounded shadowed gainsboro" am-background="divinity-bundle">
 
     <div class="bundle-info">
-
+        <ul am-list="blank">
+            <li ng-repeat="game in bundleGames" am-column="1/3">
+                <img src="assets/img/games/{{ game.slug }}.png" alt="{{ game.slug }}">
+                <hr>
+                <a href="{{ game.url }}">{{ game.name }}</a> (normal price {{ game.price }})
+                <strong>with <span ng-bind-html="game.includes"></span></strong>
+                <hr>
+                <svg am-icon="small"><use xlink:href="#icon-check-circled"></svg> <span ng-bind-html="game.availabilityLabel"></span>
+            </li>
+        </ul>
     </div>
 
     <div class="bundle-actions">
@@ -41,7 +50,7 @@
             <h2>Goodies available for free with Divinity Bundle</h2>
         </header>
 
-        <ul am-list="blank inline">
+        <ul am-list="blank">
             <li ng-repeat="goodie in bundleGoodies" am-column="1/3">
                 <svg am-icon><use ng-xlink-href="#icon-{{goodie.icon}}" xlink:href=""></svg>
                 <h4 ng-bind-html="goodie.title"></h4>

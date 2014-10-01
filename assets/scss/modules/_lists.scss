@@ -1,11 +1,9 @@
 [am-list] {
 
 }
-[am-list~="inline"] {
+[am-list~="blank"] {
+    list-style: none;
     > li {
         display: inline-block;
     }
-}
-[am-list~="blank"] {
-
 }
