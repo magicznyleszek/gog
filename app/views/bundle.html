@@ -4,17 +4,17 @@
 
     <ul am-list="blank inline">
         <li>
-            <i am-icon="heart"></i> <span class="inline-block">Support Larian Studios</span>
+            <svg am-icon><use xlink:href="#icon-heart"></svg> <span class="inline-block">Support Larian Studios</span>
         </li><!--
      --><li>
-            <i am-icon="mouse"></i> <span class="inline-block">Play Divinity&nbsp;2:&nbsp;DC before release</span>
+            <svg am-icon><use xlink:href="#icon-mouse"></svg> <span class="inline-block">Play Divinity&nbsp;2:&nbsp;DC before release</span>
         </li><!--
      --><li>
-            <i am-icon="padlock"></i> <span class="inline-block">Play Divinity&nbsp;2:&nbsp;DC before release</span>
+            <svg am-icon><use xlink:href="#icon-padlock"></svg> <span class="inline-block">Play Divinity&nbsp;2:&nbsp;DC before release</span>
         </li><!--
      --><li>
             <span am-button="fake unimportant">
-                <i am-icon="clock"></i> <span class="inline-block">Play Divinity&nbsp;2:&nbsp;DC before release</span>
+                <svg am-icon><use xlink:href="#icon-clock"></svg> <span class="inline-block">Play Divinity&nbsp;2:&nbsp;DC before release</span>
             </span>
         </li>
     </ul>
@@ -43,7 +43,7 @@
 
         <ul am-list="blank inline">
             <li ng-repeat="goodie in bundleGoodies" am-column="1/3">
-                <i am-icon="{{ goodie.icon }}"></i>
+                <svg am-icon><use ng-xlink-href="#icon-{{goodie.icon}}" xlink:href=""></svg>
                 <h4 ng-bind-html="goodie.title"></h4>
                 <p ng-bind-html="goodie.description"></p>
             </li>

@@ -1,0 +1,9 @@
+[am-icon] {
+    display: inline-block;
+    width: rem(24px);
+    height: rem(24px);
+}
+[am-icon~="small"] {
+    width: rem(14px);
+    height: rem(14px);
+}
