@@ -4,5 +4,6 @@ var gogApp = angular.module('gogApp', [
     'ngAnimate',
     'ngRoute',
     'ngSanitize',
-    'gogControllers'
+    'gogControllers',
+    'timer'
 ]);

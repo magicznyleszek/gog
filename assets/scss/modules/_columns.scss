@@ -53,3 +53,6 @@
 [am-column~="11/16"] { @include column(11,16); }
 [am-column~="13/16"] { @include column(13,16); }
 [am-column~="15/16"] { @include column(15,16); }
+
+[am-column-push~="1/2"] { @include columnPush(1,2); }
+[am-column-push~="1/20"] { @include columnPush(1,20); }

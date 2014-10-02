@@ -13,8 +13,9 @@
             <svg am-icon><use xlink:href="#icon-padlock"></svg> <span class="inline-block">Get DRM-free games with goodies</span>
         </li><!--
      --><li>
+            {{ bundle.options.deadline }}
             <span am-button="fake unimportant">
-                <svg am-icon><use xlink:href="#icon-clock"></svg> <span class="inline-block">Only XX:XX:XX left</span>
+                <svg am-icon><use xlink:href="#icon-clock"></svg> <span class="inline-block">Only <timer end-time="bundle.options.deadline" max-time-unit="'hour'">{{hours}}:{{minutes}}:{{seconds}}</timer> left</span>
             </span>
         </li>
     </ul>
@@ -25,13 +26,16 @@
 
     <div class="bundle-info">
         <ul am-list="blank">
-            <li ng-repeat="game in bundleGames" am-column="1/3">
-                <img src="assets/img/games/{{ game.slug }}.png" alt="{{ game.slug }}">
-                <hr>
+            <li class="bundle-game" ng-repeat="game in bundle.games" am-column="1/3">
+                <svg ng-if="$index > 0 && game.available" am-icon class="bundle-game-plus"><use xlink:href="#icon-plus"></svg>
+                <figure ng-am-game-logo="getGameLogoState(game.slug)" am-game-logo="" am-background="{{ game.slug }}"></figure>
+                <hr am-line="silver ghosted 90%">
                 <a href="{{ game.url }}">{{ game.name }}</a> (normal price {{ game.price }})
                 <strong>with <span ng-bind-html="game.includes"></span></strong>
-                <hr>
-                <svg am-icon="small"><use xlink:href="#icon-check-circled"></svg> <span ng-bind-html="game.availabilityLabel"></span>
+                <hr am-line="silver ghosted 90%">
+                <svg ng-if="!game.available" am-icon="small"><use xlink:href="#icon-times-circled"></svg>
+                <svg ng-if="game.available" am-icon="small olive"><use xlink:href="#icon-check-circled"></svg>
+                <span ng-bind-html="game.availabilityLabel"></span>
             </li>
         </ul>
     </div>
@@ -47,11 +51,13 @@
     <div am-column="2/3">
 
         <header am-header="lined centered">
+            <hr am-line="silver">
             <h2>Goodies available for free with Divinity Bundle</h2>
+            <hr am-line="silver">
         </header>
 
         <ul am-list="blank">
-            <li ng-repeat="goodie in bundleGoodies" am-column="1/3">
+            <li ng-repeat="goodie in bundle.goodies" am-column="1/3">
                 <svg am-icon><use ng-xlink-href="#icon-{{goodie.icon}}" xlink:href=""></svg>
                 <h4 ng-bind-html="goodie.title"></h4>
                 <p ng-bind-html="goodie.description"></p>
@@ -62,7 +68,9 @@
  --><div am-column="1/3">
 
         <header am-header="lined centered">
+            <hr am-line="silver">
             <h2>Games sold so far</h2>
+            <hr am-line="silver">
         </header>
 
         <section class="bundle-counter">

@@ -4,6 +4,16 @@ gogApp.service('Bundle', ['$http', '$q', function ($http, $q) {
     var myData = {};
 
     // get data from JSON
+    var promiseOptions = $http.get('app/data/bundle-options.json').success(function (data) {
+        myData.options = data;
+    });
+
+    // get data from JSON
+    var promiseBreakpoints = $http.get('app/data/bundle-breakpoints.json').success(function (data) {
+        myData.breakpoints = data;
+    });
+
+    // get data from JSON
     var promiseGames = $http.get('app/data/bundle-games.json').success(function (data) {
         myData.games = data;
     });
@@ -18,11 +28,22 @@ gogApp.service('Bundle', ['$http', '$q', function ($http, $q) {
         myData.unlockables = data;
     });
 
-    var promise = $q.all([promiseGames, promiseGoodies, promiseUnlockables]).then(function (result) { return result; });
+    // get data from JSON
+    var promiseSlider = $http.get('app/data/bundle-slider.json').success(function (data) {
+        myData.slider = data;
+    });
+
+    var promise = $q.all([promiseOptions, promiseBreakpoints, promiseGames, promiseGoodies, promiseUnlockables, promiseSlider]).then(function (result) { return result; });
 
     // return object
     return {
         promise: promise,
+        getOptions: function () {
+            return myData.options;
+        },
+        getBreakpoints: function () {
+            return myData.breakpoints;
+        },
         getGames: function () {
             return myData.games;
         },
@@ -31,6 +52,9 @@ gogApp.service('Bundle', ['$http', '$q', function ($http, $q) {
         },
         getUnlockables: function () {
             return myData.unlockables;
-        }
+        },
+        getSlider: function () {
+            return myData.slider;
+        },
     };
 }]);

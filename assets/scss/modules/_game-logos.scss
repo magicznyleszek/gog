@@ -1,0 +1,50 @@
+[am-game-logo] {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+}
+[am-game-logo~="divine-divinity"] {
+    width: 1px * 681/3;
+    height: 133px;
+    background-position: 0 0;
+}
+[am-game-logo~="divine-divinity-silver"] {
+    width: 1px * 681/3;
+    height: 133px;
+    background-position: -1px * 681/3 0;
+}
+[am-game-logo~="divine-divinity-gold"] {
+    width: 1px * 681/3;
+    height: 133px;
+    background-position: -2px * 681/3 0;
+}
+[am-game-logo~="beyond-divinity"] {
+    width: 1px * 684/3;
+    height: 131px;
+    background-position: 0 0;
+}
+[am-game-logo~="beyond-divinity-silver"] {
+    width: 1px * 684/3;
+    height: 131px;
+    background-position: -1px * 684/3 0;
+}
+[am-game-logo~="beyond-divinity-gold"] {
+    width: 1px * 684/3;
+    height: 131px;
+    background-position: -2px * 684/3 0;
+}
+[am-game-logo~="divinity-2-dc"] {
+    width: 1px * 768/3;
+    height: 90px;
+    background-position: 0 0;
+}
+[am-game-logo~="divinity-2-dc-silver"] {
+    width: 1px * 768/3;
+    height: 90px;
+    background-position: -1px * 768/3 0;
+}
+[am-game-logo~="divinity-2-dc-gold"] {
+    width: 1px * 768/3;
+    height: 90px;
+    background-position: -2px * 768/3 0;
+}

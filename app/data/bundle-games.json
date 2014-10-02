@@ -4,29 +4,32 @@
         "name": "Divine Divinity",
         "url": "http://www.gog.com/game/divine_divinity",
         "price": "$5.99",
-        "preorder": "false",
+        "preorder": false,
         "includes": "6 goodies and 4 language versions",
         "availabilityLabel": "Below average",
-        "availability": false
+        "available": true,
+        "breakpoint": "minimum"
     },
     {
         "slug": "beyond-divinity",
         "name": "Beyond Divinity",
         "url": "http://www.gog.com/game/beyond_divinity",
         "price": "$5.99",
-        "preorder": "false",
+        "preorder": false,
         "includes": "6 goodies and 4 language versions",
         "availabilityLabel": "Above average <span>X</span>",
-        "availability": false
+        "available": false,
+        "breakpoint": "average"
     },
     {
         "slug": "divinity-2-dc",
         "name": "Divinity 2",
         "url": "http://www.gog.com/game/divinity_2_developers_cut",
         "price": "$5.99",
-        "preorder": "true",
+        "preorder": true,
         "includes": "6 goodies and 4 language versions",
         "availabilityLabel": "Top suporter <span>X</span>",
-        "availability": false
+        "available": false,
+        "breakpoint": "top"
     }
 ]

@@ -1,0 +1,8 @@
+{
+    "value": 625,
+    "limitTop": 4999,
+    "limitBottom": 99,
+    "label": "Checkout now",
+    "helpText": "Click the price to type it in manually",
+    "helpIcon": "info-circled"
+}

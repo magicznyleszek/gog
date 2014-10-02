@@ -1,0 +1,25 @@
+[am-line] {
+    display: inline-block;
+    vertical-align: middle;
+    height: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: $black;
+    border-style: solid;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: rem(1px);
+    border-left-width: 0;
+}
+[am-line~="silver"] {
+    color: $silver;
+}
+[am-line~="ghosted"] {
+    @include opacity(0.5);
+}
+[am-line~="90%"] {
+    width: 90%;
+    margin-left: 0.5 * (100% - 90%);
+    margin-right: 0.5 * (100% - 90%)
+}
