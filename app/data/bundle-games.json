@@ -8,7 +8,8 @@
         "includes": "6 goodies and 4 language versions",
         "availabilityLabel": "Below average",
         "available": true,
-        "breakpoint": "minimum"
+        "breakpoint": "minimum",
+        "logoState": ""
     },
     {
         "slug": "beyond-divinity",
@@ -19,7 +20,8 @@
         "includes": "6 goodies and 4 language versions",
         "availabilityLabel": "Above average <span>X</span>",
         "available": false,
-        "breakpoint": "average"
+        "breakpoint": "average",
+        "logoState": ""
     },
     {
         "slug": "divinity-2-dc",
@@ -30,6 +32,7 @@
         "includes": "6 goodies and 4 language versions",
         "availabilityLabel": "Top suporter <span>X</span>",
         "available": false,
-        "breakpoint": "top"
+        "breakpoint": "top",
+        "logoState": ""
     }
 ]

@@ -13,7 +13,6 @@
             <svg am-icon><use xlink:href="#icon-padlock"></svg> <span class="inline-block">Get DRM-free games with goodies</span>
         </li><!--
      --><li>
-            {{ bundle.options.deadline }}
             <span am-button="fake unimportant">
                 <svg am-icon><use xlink:href="#icon-clock"></svg> <span class="inline-block">Only <timer end-time="bundle.options.deadline" max-time-unit="'hour'">{{hours}}:{{minutes}}:{{seconds}}</timer> left</span>
             </span>
@@ -28,7 +27,7 @@
         <ul am-list="blank">
             <li class="bundle-game" ng-repeat="game in bundle.games" am-column="1/3">
                 <svg ng-if="$index > 0 && game.available" am-icon class="bundle-game-plus"><use xlink:href="#icon-plus"></svg>
-                <figure ng-am-game-logo="getGameLogoState(game.slug)" am-game-logo="" am-background="{{ game.slug }}"></figure>
+                <figure ng-am-game-logo="{{ game.slug }}{{ game.logoState }}" am-game-logo="" am-background="{{ game.slug }}"></figure>
                 <hr am-line="silver ghosted 90%">
                 <a href="{{ game.url }}">{{ game.name }}</a> (normal price {{ game.price }})
                 <strong>with <span ng-bind-html="game.includes"></span></strong>
@@ -41,7 +40,7 @@
     </div>
 
     <div class="bundle-actions">
-
+        <slider></slider>
     </div>
 
 </section>

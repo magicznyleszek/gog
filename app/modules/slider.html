@@ -1,0 +1,24 @@
+<input am-slider type="range" min="{{ bundle.slider.limitBottom }}" max="{{ bundle.slider.limitTop }}" step="{{ bundle.slider.step }}">
+<input am-slider="hidden" type="range" min="{{ bundle.slider.limitBottom }}" max="{{ bundle.slider.limitTop }}" step="{{ bundle.slider.step }}">
+
+<input am-slider="hidden" type="range" min="{{ bundle.slider.limitBottom }}" max="{{ bundle.slider.limitTop }}" step="{{ bundle.slider.step }}" value="{{ bundle.slider.value }}" ng-model="bundle.slider.value" ng-change="checkGamesAvailability()">
+<ol am-list>
+    <li ng-if="breakpoint.visible" ng-repeat="breakpoint in bundle.breakpoints">
+        {{ breakpoint.value }} ({{ breakpoint.name }})
+        &middot;
+    </li>
+</ol>
+<ul am-list="blank" class="slider-track">
+    <li></li><li></li>
+</ul>
+<div class="slider-handle">
+
+</div>
+<div class="slider-label">
+    <span>$</span><input type="text" ng-model="bundle.slider.value" ng-change="checkGamesAvailability()">
+    <button am-button="important">{{ bundle.slider.buttonLabel }}</button>
+</div>
+<div class="slider-help">
+    <svg ng-if="!game.available" am-icon="small"><use xlink:href="#icon-info-circled"></svg>
+    {{ bundle.slider.helpText}}
+</div>

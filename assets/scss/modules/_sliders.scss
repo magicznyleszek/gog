@@ -1,0 +1,23 @@
+@if ($debugMode == true) {
+    [am-slider~="hidden"]::-webkit-slider-runnable-track { background: rgba(255,0,0,0.2); }
+    [am-slider~="hidden"]::-webkit-slider-thumb { background: rgba(0,255,255,0.2); }
+}
+[am-slider] {
+    width: 100%;
+    height: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+[am-slider~="hidden"] {
+    height: rem(10px);
+    -webkit-appearance: none;
+    background: transparent;
+    &::-webkit-slider-runnable-track {
+        height: rem(10px);
+    }
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: rem(10px);
+        width: rem(10px);
+    }
+}
