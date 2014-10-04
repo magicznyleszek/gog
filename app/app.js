@@ -5,5 +5,6 @@ var gogApp = angular.module('gogApp', [
     'ngRoute',
     'ngSanitize',
     'gogControllers',
-    'timer'
+    'timer',
+    'angular-carousel'
 ]);
