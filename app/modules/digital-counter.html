@@ -1,0 +1,5 @@
+<ol am-list="centered">
+    <li ng-repeat="digit in bundle.salesDigits">
+        <span ng-if="$index == 3" am-counter-digit>.</span><span am-counter-digit="silver">{{ digit.value }}</span>
+    </li>
+</ol>

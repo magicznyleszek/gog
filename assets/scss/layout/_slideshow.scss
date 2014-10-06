@@ -1,4 +1,7 @@
 section.slideshow {
+    position: relative;
+    margin-top: rem(24px);
+    text-align: center;
     [am-background] {
         width: 100%;
         height: rem(133px);
@@ -9,6 +12,33 @@ section.slideshow {
         @include box-sizing(border-box);
         padding-left: rem(3px);
         padding-right: rem(3px);
+        &.unavailable {
+            [am-background] {
+                position: relative;
+                &:after {
+                    content: '';
+                    display: block;
+                    @include absolute(top 0 right 0 bottom 0 left 0);
+                    background-color: rgba($black, 0.4);
+                }
+            }
+        }
+    }
+}
+.slideshow-arrow-prev, .slideshow-arrow-next {
+    [am-icon] {
+        position: absolute;
+        top: 50%;
+    }
+}
+.slideshow-arrow-prev {
+    [am-icon] {
+        left: 0;
+    }
+}
+.slideshow-arrow-next {
+    [am-icon] {
+        right: 0;
     }
 }
 menu.slideshow-menu {

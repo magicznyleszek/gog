@@ -55,7 +55,9 @@
     </div>
 
     <div class="bundle-actions">
+
         <slider></slider>
+
     </div>
 
 </section>
@@ -64,13 +66,11 @@
 
     <div am-column="2/3">
 
-        <header am-header="lined centered">
-            <hr am-line="silver">
+        <header am-header="lined">
             <h2>Goodies available for free with Divinity Bundle</h2>
-            <hr am-line="silver">
         </header>
 
-        <ul am-list="centered spaced">
+        <ul am-list="centered spaced padded-more">
             <li ng-repeat="goodie in bundle.goodies" am-column="1/3">
                 <svg am-icon><use ng-xlink-href="#icon-{{goodie.icon}}" xlink:href=""></svg>
                 <h4 ng-bind-html="goodie.title"></h4>
@@ -81,58 +81,12 @@
     </div><!--
  --><div am-column="1/3">
 
-        <header am-header="lined centered">
-            <hr am-line="silver">
+        <header am-header="lined">
             <h2>Games sold so far</h2>
-            <hr am-line="silver">
         </header>
 
-        <section class="bundle-counter">
+        <digital-counter></digital-counter>
 
-            <!-- hundred thousands, ten thousands and thousands -->
-            <span am-counter="thousands">000</span>
-            <span>.</span>
-            <!-- hundreds, tens and ones -->
-            <span am-counter="hundreds">{{ bundle.sales.length }}</span>
-
-        </section>
-
-        <section class="slideshow">
-
-            <div am-column="1/10">
-
-                <button am-button="small" ng-click="flipsnap.toPrev()">&lt;</button>
-            
-            </div><!--
-         --><div flipsnap flipsnap-id="unlockablesFlipsnap" am-column="4/5">
-
-                <div flipsnap-pane ng-repeat="unlockable in bundle.unlockables" ng-class="{ 'unavailable': unlockable.breakpoint < bundle.sales.length }">
-
-                    <h4>Reach {{ unlockable.label }}&hellip;</h4>
-
-                    <p>&hellip;to unlock <span ng-bind-html="unlockable.description"></span></p>
-
-                    <div am-box="white shadowed padded">
-                        <figure am-background style="background-image: url(https://img.youtube.com/vi/{{ unlockable.youtubeId }}/hqdefault.jpg)"></figure>
-                    </div>
-
-                </div>
-
-            </div><!--
-         --><div am-column="1/10">
-
-                <button am-button="small" ng-click="flipsnap.toNext()">&gt;</button>
-            
-            </div>
-
-            <menu class="slideshow-menu">
-                <ol am-list>
-                    <li ng-repeat="unlockable in bundle.unlockables" ng-class="{ 'active': flipsnap.currentPoint == $index }">
-                        <button am-button="small lightGray" ng-click="flipsnap.moveToPoint($index)">{{ unlockable.breakpoint }}</button>
-                    </li>
-                </ol>
-            </menu>
-
-        </section>
+        <slideshow></slideshow>
 
 </footer>

@@ -1,7 +1,7 @@
 html {
     font: 400 #{$fontSizeMedium}/1.5 $open;
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
     line-height: 1;
 }
 h1 {
@@ -23,6 +23,8 @@ h2 {
 h4 {
     font-size: rem(12px);
     font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
 }
 header.view-header {
 

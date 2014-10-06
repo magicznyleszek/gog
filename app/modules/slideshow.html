@@ -1,0 +1,44 @@
+<section class="slideshow">
+
+    <div am-column="1/10" class="slideshow-arrow-prev">
+
+        <svg ng-if="flipsnap.canMovePrev" ng-click="flipsnap.toPrev()" am-icon><use xlink:href="#icon-angle-left-circled"></svg>
+
+    </div><!--
+ --><div flipsnap flipsnap-id="unlockablesFlipsnap" am-column="4/5">
+
+        <div flipsnap-pane ng-repeat="unlockable in bundle.unlockables" ng-class="{ 'unavailable': bundle.sales.length < unlockable.breakpoint }">
+
+            <h4>Reach {{ unlockable.label }}&hellip;</h4>
+
+            <p>&hellip;to unlock <span ng-bind-html="unlockable.description"></span></p>
+
+            <div am-box="white shadowed padded">
+                <figure am-background style="background-image: url(https://img.youtube.com/vi/{{ unlockable.youtubeId }}/hqdefault.jpg)"></figure>
+            </div>
+
+        </div>
+
+    </div><!--
+ --><div am-column="1/10" class="slideshow-arrow-next">
+
+        <svg ng-if="flipsnap.canMoveNext" ng-click="flipsnap.toNext()" am-icon><use xlink:href="#icon-angle-right-circled"></svg>
+
+    </div>
+
+    <menu class="slideshow-menu">
+        <ol am-list>
+            <li ng-repeat="unlockable in bundle.unlockables" ng-class="{ 'active': flipsnap.currentPoint == $index }">
+
+                <button am-button="small lightGray" ng-click="flipsnap.moveToPoint($index)">
+
+                    <span ng-if="bundle.sales.length < unlockable.breakpoint"></span>{{ unlockable.breakpoint }}
+                    <svg ng-if="bundle.sales.length >= unlockable.breakpoint" am-icon="small"><use xlink:href="#icon-check"></svg>
+
+                </button>
+
+            </li>
+        </ol>
+    </menu>
+
+</section>

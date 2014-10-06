@@ -1,0 +1,35 @@
+[am-counter-digit] {
+    position: relative;
+    display: inline-block;
+    vertical-align: baseline;
+    color: $gray;
+    font-family: $digital;
+    font-size: rem(20px);
+    line-height: rem(40px);
+    text-align: right;
+    margin-left: rem(1px);
+    margin-right: rem(1px);
+    margin-top: rem(24px);
+}
+[am-counter-digit~="silver"] {
+    font-size: rem(40px);
+    width: rem(20px);
+    color: $white;
+    background-color: $silver;
+    @include gradientVertical($gray, $silver);
+    border-width: rem(1px);
+    border-style: solid;
+    border-color: rgba($black, 0.15);
+    @include border-radius(rem(2px));
+    padding-left: rem(5px);
+    padding-right: rem(5px);
+    @include text-shadow(0 rem(1px) rem(1px) rgba($black, 0.3));
+    @include box-shadow(0 rem(1px) 0 0 rgba($white, 0.5));
+    &:after {
+        content: '8';
+        @include absolute(top 0 left 0 bottom 0 right 0);
+        padding-left: rem(5px);
+        padding-right: rem(5px);
+        @include opacity(0.1);
+    }
+}

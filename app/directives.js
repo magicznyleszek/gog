@@ -1,8 +1,20 @@
-// slider
+// simple import directives
 gogApp.directive('slider', function () {
     return {
         restrict: 'E',
         templateUrl: 'app/modules/slider.html'
+    };
+});
+gogApp.directive('slideshow', function () {
+    return {
+        restrict: 'E',
+        templateUrl: 'app/modules/slideshow.html'
+    };
+});
+gogApp.directive('digitalCounter', function () {
+    return {
+        restrict: 'E',
+        templateUrl: 'app/modules/digital-counter.html'
     };
 });
 

@@ -6,6 +6,7 @@ gogControllers.controller('BundleController', ['$scope', 'Bundle', function ($sc
 
     // define useful bundle object
     $scope.bundle = {};
+    $scope.bundle.salesDigits = [];
 
     // get data from services
     $scope.bundle.options = Bundle.getOptions();
@@ -87,7 +88,7 @@ gogControllers.controller('BundleController', ['$scope', 'Bundle', function ($sc
         // calculate percent width
         percent = (breakpoint.value - $scope.bundle.slider.limitBottom) / ($scope.bundle.slider.limitTop - $scope.bundle.slider.limitBottom) * 100;
         percent += '%';
-        return percent; 
+        return percent;
     }
 
     // returns progress bar percent value
@@ -140,6 +141,8 @@ gogControllers.controller('BundleController', ['$scope', 'Bundle', function ($sc
         });
         // push transaction
         $scope.bundle.sales.push(transaction);
+        // update digits
+        $scope.updateSalesDigits();
         // print info
         console.info('pushed transaction', transaction);
     };
@@ -165,9 +168,9 @@ gogControllers.controller('BundleController', ['$scope', 'Bundle', function ($sc
         var limitedNumber = Number(number);
         // check if within the limits
         if (limitedNumber > $scope.bundle.slider.limitTop) {
-            limitedNumber = $scope.bundle.slider.limitTop
+            limitedNumber = $scope.bundle.slider.limitTop;
         } else if (limitedNumber < $scope.bundle.slider.limitBottom) {
-            limitedNumber = $scope.bundle.slider.limitBottom
+            limitedNumber = $scope.bundle.slider.limitBottom;
         }
         return limitedNumber;
     };
@@ -199,7 +202,31 @@ gogControllers.controller('BundleController', ['$scope', 'Bundle', function ($sc
         return average;
     };
 
+    // for updating sales amount for counter
+    $scope.updateSalesDigits = function () {
+        $scope.bundle.salesDigits = $scope.getDigits($scope.bundle.sales.length);
+    };
+
+    // return an array of sales digits
+    $scope.getDigits = function (number) {
+        // declarations
+        var numberArray = String(number).split('');
+        var digits = [];
+        var a;
+        // loop through number array
+        for (a = 0; a < 6; a += 1) {
+            // add every digit and fill the rest with zeroes
+            if (numberArray[a]) {
+                digits.push({ 'value': numberArray[a] });
+            } else {
+                digits.unshift({ 'value': 0 });
+            }
+        }
+        return digits;
+    };
+
     // initialize app
+    $scope.updateSalesDigits();
     $scope.updateBreakpoints();
     $scope.checkGamesAvailability();
 
