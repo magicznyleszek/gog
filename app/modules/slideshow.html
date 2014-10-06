@@ -32,7 +32,7 @@
 
                 <button am-button="small lightGray" ng-click="flipsnap.moveToPoint($index)">
 
-                    <span ng-if="bundle.sales.length < unlockable.breakpoint"></span>{{ unlockable.breakpoint }}
+                    <span ng-if="bundle.sales.length < unlockable.breakpoint">{{ unlockable.label }}</span>
                     <svg ng-if="bundle.sales.length >= unlockable.breakpoint" am-icon="small"><use xlink:href="#icon-check"></svg>
 
                 </button>
