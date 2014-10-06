@@ -45,4 +45,9 @@
 [am-button~="small"] {
     line-height: rem(20px);
     font-size: rem(10px);
+
+}
+[am-button~="lightGray"] {
+    background: $lightGray;
+    @include box-shadow(0 rem(1px) 0 0 rgba($white, 0.5));
 }

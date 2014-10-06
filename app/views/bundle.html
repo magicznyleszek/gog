@@ -43,7 +43,7 @@
 
                 <hr am-line="silver ghosted 90%">
 
-                <div class="bundle-game-availability-label" ng-class="{'bundle-game-availability-label--olive': game.available}">
+                <div class="bundle-game-availability-label" ng-class="{ 'bundle-game-availability-label--olive': game.available }">
                     <svg ng-if="!game.available" am-icon="small dimGray"><use xlink:href="#icon-times-circled"></svg>
                     <svg ng-if="game.available" am-icon="small olive"><use xlink:href="#icon-check-circled"></svg>
                     <span ng-bind-html="game.availabilityLabel"></span>
@@ -99,8 +99,14 @@
 
         <section class="slideshow">
 
-            <div flipsnap flipsnap-id="unlockablesFlipsnap">
-                <div flipsnap-pane ng-repeat="unlockable in bundle.unlockables">
+            <div am-column="1/10">
+
+                <button am-button="small" ng-click="flipsnap.toPrev()">&lt;</button>
+            
+            </div><!--
+         --><div flipsnap flipsnap-id="unlockablesFlipsnap" am-column="4/5">
+
+                <div flipsnap-pane ng-repeat="unlockable in bundle.unlockables" ng-class="{ 'unavailable': unlockable.breakpoint < bundle.sales.length }">
 
                     <h4>Reach {{ unlockable.label }}&hellip;</h4>
 
@@ -111,16 +117,18 @@
                     </div>
 
                 </div>
+
+            </div><!--
+         --><div am-column="1/10">
+
+                <button am-button="small" ng-click="flipsnap.toNext()">&gt;</button>
+            
             </div>
 
-            <button am-button="small" ng-click="flipsnap.toPrev()">toPrev()</button>
-
-            <button am-button="small" ng-click="flipsnap.toNext()">toNext()</button>
-
-            <menu>
+            <menu class="slideshow-menu">
                 <ol am-list>
-                    <li ng-repeat="unlockable in bundle.unlockables" ng-class="{'active': flipsnap.currentPoint == $index}">
-                        <button am-button="small" ng-click="flipsnap.moveToPoint($index)">{{ unlockable.breakpoint }}</button>
+                    <li ng-repeat="unlockable in bundle.unlockables" ng-class="{ 'active': flipsnap.currentPoint == $index }">
+                        <button am-button="small lightGray" ng-click="flipsnap.moveToPoint($index)">{{ unlockable.breakpoint }}</button>
                     </li>
                 </ol>
             </menu>

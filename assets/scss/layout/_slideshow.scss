@@ -5,19 +5,39 @@ section.slideshow {
         background-position: center center
     }
     [flipsnap-pane] {
-        max-width: rem(320px);
+        max-width: rem(256px);
+        @include box-sizing(border-box);
+        padding-left: rem(3px);
+        padding-right: rem(3px);
     }
-    [am-button] {
+}
+menu.slideshow-menu {
+    text-align: center;
+    li {
         &:not(:first-child):not(:last-child) {
-            @include border-radius(0);
-            border-left-width: 0;
+            [am-button] {
+                @include border-radius(0);
+                border-left-width: 0;
+            }
         }
         &:first-child:not(:last-child) {
-            @include border-radius(0 0 rem(5px) rem(5px));
+            [am-button] {
+                @include border-radius(rem(5px) 0 0 rem(5px));
+            }
         }
         &:last-child:not(:first-child) {
-            @include border-radius(rem(5px) rem(5px) 0 0);
-            border-left-width: 0;
+            [am-button] {
+                @include border-radius(0 rem(5px) rem(5px) 0);
+                border-left-width: 0;
+            }
+        }
+        &.active {
+            [am-button~="small"] {
+                line-height: rem(20px);
+                font-size: rem(10px);
+                @include gradientVertical($gray, $veryLightGray);
+                @include box-shadow(0 rem(1px) 0 0 rgba($white, 0.5), inset 0 rem(5px) rem(10px) 0 rgba($black, 0.25));
+            }
         }
     }
 }
