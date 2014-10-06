@@ -31,3 +31,18 @@ Notes:
     - [angular-flipsnap](https://github.com/ninjatronic/angular-flipsnap) by Pete Martin
     - [flipsnap](http://pxgrid.github.io/js-flipsnap/) by Kazuhito Hokamura
 - I decided to use the experimental [Attribute Modules CSS technique](http://amcss.github.io/), which turned out awesome
+
+[Generator](http://www.json-generator.com/) input:
+
+```
+[
+    '{{repeat(9999)}}',
+    {
+        user: {
+            name: "faker"
+        },
+        games: [],
+        value: '{{floating(0.99, 30.99, 2)}}',
+    }
+]
+```
