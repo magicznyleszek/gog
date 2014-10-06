@@ -12,6 +12,7 @@ section.slideshow {
     }
 }
 menu.slideshow-menu {
+    margin-top: rem(12px);
     text-align: center;
     li {
         &:not(:first-child):not(:last-child) {
