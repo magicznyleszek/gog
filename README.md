@@ -1,8 +1,16 @@
 # GOG
 
+
 ## Todo
 
-- form validation
+- slideshow unavailable pane percent graph
+- slider form speech box final shape
+- icon styles for svg icons
+- bundle price form validation
+- cross-browser testing and fallbacks
+- mass sales popuplating function for demo purposes
+- mobile styles
+
 
 ## Issues and notes
 
@@ -14,4 +22,8 @@ Issues:
 Notes:
 
 - the site is run on AngularJS with most content defined in `.json` data files
-- I decided to use [Attribute Modules CSS technique](http://amcss.github.io/) for modules
+- some misc plugins:
+    - [angular-timer](https://github.com/siddii/angular-timer) by Siddique Hameed
+    - [angular-flipsnap](https://github.com/ninjatronic/angular-flipsnap) by Pete Martin
+    - [flipsnap](http://pxgrid.github.io/js-flipsnap/) by Kazuhito Hokamura
+- I decided to use the experimental [Attribute Modules CSS technique](http://amcss.github.io/), which turned out awesome

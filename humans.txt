@@ -1,21 +1,28 @@
 ## TEAM
 
-Your title: Name Surname
-Site: url
-Email: email
-Location: city, country
+Front-end developer: Leszek Pietrzak
+Site: http://leszekpietrzak.com
+Email: smutnyleszek@gmail.com
+Location: Warsaw, Poland
+
+Designer: Unknown
+Site: http://gog.com
+Email: unknown
+Location: Warsaw, Poland
 
 
 ## THANKS
 
-Tom Preston-Werner, Nick Quaranto: jekyllrb.com
-Dave Gandy: fontawesome.io
 Christopher Eppstein: compass-style.org
-Name: url/email
+Misko Hevery: https://angularjs.org
+Pete Martin: https://github.com/ninjatronic/angular-flipsnap
+Kazuhito Hokamura: http://pxgrid.github.io/js-flipsnap/
+Siddique Hameed: https://github.com/siddii/angular-timer
+Glen Maddern: http://amcss.github.io/
 
 
 ## SITE
 
-Last update: YYYY/MM/DD
-Language: Polish, English
-Software: Sublime Text 2, Adobe Illustrator
+Last update: 2104/10/06
+Language: English
+Software: Atom, Adobe Photoshop, Adobe Illustrator, ImageOptim, Google Chrome
