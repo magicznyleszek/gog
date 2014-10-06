@@ -1,11 +1,13 @@
 section.slideshow {
     position: relative;
-    margin-top: rem(24px);
     text-align: center;
+    [am-box] {
+        margin-top: 1.5rem;
+    }
     [am-background] {
         width: 100%;
         height: rem(133px);
-        background-position: center center
+        background-position: center center;
     }
     [flipsnap-pane] {
         display: inline-block;
