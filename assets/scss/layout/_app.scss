@@ -27,6 +27,7 @@ section.app-content {
 footer.app-footer {
     @include column();
     min-height: rem(60px);
+    margin-top: rem(42px);
     padding-top: rem(24px);
     padding-bottom: rem(24px);
     text-align: center;

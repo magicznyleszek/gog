@@ -3,13 +3,24 @@
     vertical-align: middle;
     width: rem(24px);
     height: rem(24px);
+    max-width: none;
 }
 [am-icon~="small"] {
     width: rem(14px);
     height: rem(14px);
 }
+[am-icon~="tiny"] {
+    width: rem(7px);
+    height: rem(7px);
+}
 [am-icon~="olive"] {
     fill: $olive;
+}
+[am-icon~="gray"] {
+    fill: $gray;
+}
+[am-icon~="dimGray"] {
+    fill: $dimGray;
 }
 [am-icon~="gradiented"] {
     fill: rgba($white, 0.2);

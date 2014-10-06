@@ -1,0 +1,28 @@
+[am-bar] {
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    @include box-sizing(border-box);
+    height: rem(12px);
+    @include border-radius(rem(6px));
+    background-color: $lightGray;
+    @include gradientVertical($silver, $lightGray);
+    color: $gray;
+    border-style: solid;
+    border-width: rem(1px);
+    @include box-shadow(0 rem(1px) 0 0 rgba($white, 0.5), inset 0 0 rem(2px) 0 rgba($black, 0.25));
+}
+[am-bar~="parent"] {
+    position: relative;
+}
+[am-bar~="child"] {
+    position: absolute;
+    top: rem(-1px); // because of border
+    left: rem(-1px); // because of border
+}
+[am-bar~="olive"] {
+    background-color: $olive;
+    @include gradientVertical($citrus, $olive);
+    border-color: shade($olive, 25);
+    @include box-shadow(0 rem(1px) 0 0 rgba($white, 0.5), inset 0 rem(1px) 0 0 rgba($white, 0.5), inset 0 rem(3px) rem(6px) 0 rgba($white, 0.25));
+}

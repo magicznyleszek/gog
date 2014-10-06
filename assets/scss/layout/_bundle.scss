@@ -1,5 +1,105 @@
-.bundle-info {}
-.bundle-game {}
-.bundle-game-logo {}
-.bundle-game-plus {}
-.bundle-actions {}
+.bundle-info {
+    padding-top: rem(24px);
+}
+.bundle-game {
+    position: relative;
+}
+.bundle-game-logo {
+    min-height: rem(138px);
+    // tallest and shortest image average
+    line-height: rem((133px + 90px) * 0.5);
+}
+.bundle-game-plus {
+    @include absolute(left 0);
+    top: rem(36px);
+    margin-left: rem(-12px);
+}
+.bundle-game-availability-label {
+    color: $dimGray;
+}
+.bundle-game-availability-label--olive {
+    color: $olive;
+}
+.bundle-actions {
+    margin-top: rem(24px);
+    padding-top: rem(36px);
+    padding-bottom: rem(108px);
+    background-color: rgba($white, 0.2);
+    border-width: 0;
+    border-style: solid;
+    border-color: $silver;
+    border-top-width: rem(1px);
+    @include box-shadow(inset 0 rem(1px) 0 rgba($white, 0.5));
+    text-align: center;
+    .slider-limit {
+        font-size: rem(14px);
+    }
+    [am-slider] {
+        @include absolute(top 0 left 0);
+        z-index: $zIndex9;
+    }
+    ol.slider-breakpoints {
+        z-index: $zIndex2;
+        @include absolute(top 0 left 0);
+        width: 100%;
+        margin: 0;
+    }
+    li.slider-breakpoint {
+        @include absolute(top 0);
+        label {
+            @include absolute(left 0);
+            top: rem(-24px);
+            font-size: rem(10px);
+            width: rem(160px);
+            margin-left: rem(-0.5 * 160px);
+        }
+        [am-icon] {
+            position: absolute;
+            top: rem(2px);
+            left: rem(-0.5 * 7px);
+        }
+    }
+    .slider-handle {
+        @include absolute(top 0 left 0);
+        z-index: $zIndex5;
+    }
+    .slider-handle-thumb {
+        @include absolute(left 0);
+        z-index: $zIndex3;
+        top: rem(-6px);
+        margin-left: rem(-12px);
+    }
+    .slider-handle-label {
+        @include absolute(left 0);
+        z-index: $zIndex1;
+        top: rem(28px);
+        min-width: rem(240px);
+        margin-left: rem(-0.5 * 240px);
+        [am-box] {
+            padding-top: rem(9px);
+            padding-bottom: rem(9px);
+            margin-bottom: rem(6px);
+        }
+    }
+    [am-bar] {
+        z-index: $zIndex1;
+    }
+}
+.bundle-price {
+    display: inline-block;
+    input, label {
+        color: $olive;
+        font-size: rem(25px);
+        font-weight: 700;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    input {
+        @include appearance(none);
+        border: 0;
+        padding: 0;
+        margin: 0;
+        background: transparent;
+        width: rem(72px);
+    }
+}

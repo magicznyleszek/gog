@@ -29,11 +29,16 @@ gogApp.service('Bundle', ['$http', '$q', function ($http, $q) {
     });
 
     // get data from JSON
+    var promiseSales = $http.get('app/data/bundle-sales.json').success(function (data) {
+        myData.sales = data;
+    });
+
+    // get data from JSON
     var promiseSlider = $http.get('app/data/bundle-slider.json').success(function (data) {
         myData.slider = data;
     });
 
-    var promise = $q.all([promiseOptions, promiseBreakpoints, promiseGames, promiseGoodies, promiseUnlockables, promiseSlider]).then(function (result) { return result; });
+    var promise = $q.all([promiseOptions, promiseBreakpoints, promiseGames, promiseGoodies, promiseUnlockables, promiseSales, promiseSlider]).then(function (result) { return result; });
 
     // return object
     return {
@@ -53,8 +58,11 @@ gogApp.service('Bundle', ['$http', '$q', function ($http, $q) {
         getUnlockables: function () {
             return myData.unlockables;
         },
+        getSales: function () {
+            return myData.sales;
+        },
         getSlider: function () {
             return myData.slider;
-        },
+        }
     };
 }]);

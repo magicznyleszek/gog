@@ -9,7 +9,7 @@
     color: $nightRider;
     background-color: $whiteSmoke;
     @include gradientVertical($whiteSmoke, $veryLightGray);
-    @include box-shadow(0 rem(1px) rem(2px) rem(-1px) rgba($black, 1), inset 0 rem(1px) 0 0 rgba($white, 0.5), inset 0 rem(3px) rem(6px) 0 rgba($white, 0.25));
+    @include box-shadow(0 rem(1px) rem(2px) rem(-2px) rgba($black, 1), inset 0 rem(1px) 0 0 rgba($white, 0.5), inset 0 rem(3px) rem(6px) 0 rgba($white, 0.25));
     border-width: rem(1px);
     border-style: solid;
     border-color: $gray;

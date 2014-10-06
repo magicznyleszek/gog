@@ -18,7 +18,7 @@
         "price": "$5.99",
         "preorder": false,
         "includes": "6 goodies and 4 language versions",
-        "availabilityLabel": "Above average <span>X</span>",
+        "availabilityLabel": "Above average",
         "available": false,
         "breakpoint": "average",
         "logoState": ""
@@ -30,7 +30,7 @@
         "price": "$5.99",
         "preorder": true,
         "includes": "6 goodies and 4 language versions",
-        "availabilityLabel": "Top suporter <span>X</span>",
+        "availabilityLabel": "Top supporter",
         "available": false,
         "breakpoint": "top",
         "logoState": ""

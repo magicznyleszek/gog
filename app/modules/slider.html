@@ -1,24 +1,49 @@
-<input am-slider type="range" min="{{ bundle.slider.limitBottom }}" max="{{ bundle.slider.limitTop }}" step="{{ bundle.slider.step }}">
-<input am-slider="hidden" type="range" min="{{ bundle.slider.limitBottom }}" max="{{ bundle.slider.limitTop }}" step="{{ bundle.slider.step }}">
+<div am-column="9/100" class="slider-limit">
 
-<input am-slider="hidden" type="range" min="{{ bundle.slider.limitBottom }}" max="{{ bundle.slider.limitTop }}" step="{{ bundle.slider.step }}" value="{{ bundle.slider.value }}" ng-model="bundle.slider.value" ng-change="checkGamesAvailability()">
-<ol am-list>
-    <li ng-if="breakpoint.visible" ng-repeat="breakpoint in bundle.breakpoints">
-        {{ breakpoint.value }} ({{ breakpoint.name }})
-        &middot;
-    </li>
-</ol>
-<ul am-list="blank" class="slider-track">
-    <li></li><li></li>
-</ul>
-<div class="slider-handle">
+    <strong>${{ bundle.slider.limitBottom }}</strong>
 
-</div>
-<div class="slider-label">
-    <span>$</span><input type="text" ng-model="bundle.slider.value" ng-change="checkGamesAvailability()">
-    <button am-button="important">{{ bundle.slider.buttonLabel }}</button>
-</div>
-<div class="slider-help">
-    <svg ng-if="!game.available" am-icon="small"><use xlink:href="#icon-info-circled"></svg>
-    {{ bundle.slider.helpText}}
+</div><!--
+--><div am-column="82/100">
+
+    <div am-bar="parent">
+
+        <input am-slider="hidden" type="range" min="{{ bundle.slider.limitBottom }}" max="{{ bundle.slider.limitTop }}" step="{{ bundle.slider.step }}" value="{{ bundle.slider.value }}" ng-model="bundle.slider.value" ng-change="checkGamesAvailability(); updateValues();">
+
+        <ol class="slider-breakpoints" am-list>
+            <li class="slider-breakpoint" ng-if="breakpoint.visible" ng-repeat="breakpoint in bundle.breakpoints" style="left: {{ getBreakpointPercent(breakpoint) }}">
+                <label>${{ breakpoint.value }} ({{ breakpoint.name }})</label>
+                <svg am-icon="tiny"><use xlink:href="#icon-dot"></svg>
+            </li>
+        </ol>
+
+        <div class="slider-handle" style="left: {{ getSliderProgressPercent() }}">
+
+            <svg class="slider-handle-thumb" am-icon><use xlink:href="#icon-slider-thumb"></svg>
+
+            <div class="slider-handle-label">
+
+                <form am-box="rounded sunken">
+                    <div class="bundle-price">
+                        <label for="bundle-price">$</label>
+                        <input id="bundle-price" type="text" name="price" required ng-model="bundle.slider.value" ng-change="checkGamesAvailability()" ng-pattern="/^\d{0,9}(\.\d{1,9})?$/">
+                    </div>
+                    <button am-button="important" ng-click="buyGame({'name': 'tester'}); updateBreakpoints()">{{ bundle.slider.buttonLabel }}</button>
+                </form>
+
+                <svg ng-if="!game.available" am-icon="small gray"><use xlink:href="#icon-info-circled"></svg>
+                {{ bundle.slider.helpText}}
+
+            </div>
+            
+        </div>
+
+        <div am-bar="child olive" style="width: {{ getSliderProgressPercent() }}"></div>
+
+    </div>
+
+</div><!--
+--><div am-column="9/100" class="slider-limit">
+
+    <strong>${{ bundle.slider.limitTop }}</strong>
+
 </div>

@@ -1,6 +1,7 @@
 {
-    "step": 0.1,
+    "step": 0.01,
     "value": 6.25,
+    "progressPercent": 0,
     "limitTop": 49.99,
     "limitBottom": 0.99,
     "buttonLabel": "Checkout now",

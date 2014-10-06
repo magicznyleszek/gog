@@ -2,7 +2,7 @@
 
     <h1>Pay what you want for the <strong>Divinity Bundle</strong> ($32 value!)</h1>
 
-    <ul am-list="blank">
+    <ul am-list="centered spaced padded">
         <li>
             <svg am-icon="gradiented"><use xlink:href="#icon-heart"></svg> <span class="inline-block">Support Larian Studios</span>
         </li><!--
@@ -24,17 +24,32 @@
 <section class="view-content" am-box="rounded shadowed gainsboro" am-background="divinity-bundle">
 
     <div class="bundle-info">
-        <ul am-list="blank">
+        <ul am-list="centered spaced">
             <li class="bundle-game" ng-repeat="game in bundle.games" am-column="1/3">
+
                 <svg ng-if="$index > 0 && game.available" am-icon class="bundle-game-plus"><use xlink:href="#icon-plus"></svg>
-                <figure ng-am-game-logo="{{ game.slug }}{{ game.logoState }}" am-game-logo="" am-background="{{ game.slug }}"></figure>
+
+                <div class="bundle-game-logo">
+                    <figure ng-am-game-logo="{{ game.slug }}{{ game.logoState }}" am-game-logo="" am-background="{{ game.slug }}"></figure>
+                </div>
+
                 <hr am-line="silver ghosted 90%">
-                <a href="{{ game.url }}">{{ game.name }}</a> (normal price {{ game.price }})
-                <strong>with <span ng-bind-html="game.includes"></span></strong>
+
+                <div>
+                    <a href="{{ game.url }}">{{ game.name }}</a> (normal price {{ game.price }})
+                    <br>
+                    <strong>with <span ng-bind-html="game.includes"></span></strong>
+                </div>
+
                 <hr am-line="silver ghosted 90%">
-                <svg ng-if="!game.available" am-icon="small"><use xlink:href="#icon-times-circled"></svg>
-                <svg ng-if="game.available" am-icon="small olive"><use xlink:href="#icon-check-circled"></svg>
-                <span ng-bind-html="game.availabilityLabel"></span>
+
+                <div class="bundle-game-availability-label" ng-class="{'bundle-game-availability-label--olive': game.available}">
+                    <svg ng-if="!game.available" am-icon="small dimGray"><use xlink:href="#icon-times-circled"></svg>
+                    <svg ng-if="game.available" am-icon="small olive"><use xlink:href="#icon-check-circled"></svg>
+                    <span ng-bind-html="game.availabilityLabel"></span>
+                    <strong>{{ getAvailabilityBreakpointValue(game.breakpoint, '(from $', ')') }}</strong>
+                </div>
+
             </li>
         </ul>
     </div>
@@ -55,7 +70,7 @@
             <hr am-line="silver">
         </header>
 
-        <ul am-list="blank">
+        <ul am-list="centered spaced">
             <li ng-repeat="goodie in bundle.goodies" am-column="1/3">
                 <svg am-icon><use ng-xlink-href="#icon-{{goodie.icon}}" xlink:href=""></svg>
                 <h4 ng-bind-html="goodie.title"></h4>

@@ -1,5 +1,9 @@
 # GOG
 
+## Todo
+
+- form validation
+
 ## Issues and notes
 
 Issues:

@@ -1,5 +1,5 @@
 // debug mode
-$debugMode: true;
+$debugMode: false;
 
 // typography and font sizes for breakpoints
 $open: "Open Sans", sans-serif;
@@ -30,7 +30,7 @@ $darkGreen: rgb(3, 16, 26); // button text
 // breakpoints and content widths
 $breakBig: 1280px;
 $breakSmall: 640px;
-$appContentWidth: 950px;
+$appContentWidth: 960px;
 
 // speed
 $fastest: 0.125s;
@@ -50,3 +50,11 @@ $divinity2Sprite: url("../img/games/divinity-2-dc-sprite.png");
 // z-indexes
 $zIndex0: -1;
 $zIndex1: 10;
+$zIndex2: 20;
+$zIndex3: 30;
+$zIndex4: 40;
+$zIndex5: 50;
+$zIndex6: 60;
+$zIndex7: 70;
+$zIndex8: 80;
+$zIndex9: 90;
