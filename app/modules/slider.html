@@ -27,7 +27,7 @@
                         <label for="bundle-price">$</label>
                         <input id="bundle-price" type="text" name="price" required ng-model="bundle.slider.value" ng-change="checkGamesAvailability()" ng-pattern="/^\d{0,9}(\.\d{1,9})?$/">
                     </div>
-                    <button am-button="important" ng-click="buyGame({'name': 'tester'}); updateBreakpoints()">{{ bundle.slider.buttonLabel }}</button>
+                    <button am-button="important" ng-click="buyGame({'name': 'tester'}); updateBreakpoints();">{{ bundle.slider.buttonLabel }}</button>
                 </form>
 
                 <svg ng-if="!game.available" am-icon="small gray"><use xlink:href="#icon-info-circled"></svg>

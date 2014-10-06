@@ -145,6 +145,30 @@ gogControllers.controller('BundleController', ['$scope', 'Bundle', function ($sc
         console.info('pushed transaction', transaction);
     };
 
+    // populate sales in massive scale
+    $scope.buyManyGames = function (amount) {
+        // declarations
+        var min = 0.99;
+        var max = 23.99;
+        var transaction = {
+            user: 'wholesaler',
+            games: [],
+            value: 0
+        };
+        var a;
+        // loop through given amount
+        for (a = 0; a < amount; a += 1) {
+            // generate random value
+            transaction.value = Number((Math.random() * (max - min) + min).toFixed(2));
+            // push transaction
+            $scope.bundle.sales.push(transaction);
+        }
+        // update digits
+        $scope.updateSalesDigits();
+        // print info
+        console.info('pushed transactions', amount);
+    };
+
     // recalculate breakpoints value
     $scope.updateBreakpoints = function () {
         // declarations
@@ -235,6 +259,11 @@ gogControllers.controller('BundleController', ['$scope', 'Bundle', function ($sc
             }
         }
         return digits;
+    };
+
+    // prints data in console
+    $scope.printBundleInfo = function () {
+        console.log($scope.bundle);
     };
 
     // initialize app
