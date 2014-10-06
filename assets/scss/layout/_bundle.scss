@@ -66,8 +66,8 @@
     .slider-handle-thumb {
         @include absolute(left 0);
         z-index: $zIndex3;
-        top: rem(-6px);
-        margin-left: rem(-12px);
+        top: rem(-9px);
+        margin-left: rem(-16px);
     }
     .slider-handle-label {
         @include absolute(left 0);

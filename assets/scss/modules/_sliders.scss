@@ -1,7 +1,3 @@
-@if ($debugMode == true) {
-    [am-slider~="hidden"]::-webkit-slider-runnable-track { background: rgba(255,0,0,0.2); }
-    [am-slider~="hidden"]::-webkit-slider-thumb { background: rgba(0,255,255,0.2); }
-}
 [am-slider] {
     width: 100%;
     height: 1.5rem;
@@ -11,13 +7,19 @@
 [am-slider~="hidden"] {
     height: rem(10px);
     @include opacity(0);
+    @include appearance(none);
     &::-webkit-slider-runnable-track {
         height: rem(12px);
     }
     &::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        height: rem(28px);
-        width: rem(13px);
-        margin-top: rem(-6px);
+        @include appearance(none);
+        height: rem(32px);
+        width: rem(16px);
+        margin-top: rem(-9px);
     }
+}
+@if ($debugMode == true) {
+    [am-slider~="hidden"] { @include opacity(1); }
+    [am-slider~="hidden"]::-webkit-slider-runnable-track { background: rgba(255,0,0,0.2); }
+    [am-slider~="hidden"]::-webkit-slider-thumb { background: rgba(0,255,255,0.2); }
 }
