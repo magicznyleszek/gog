@@ -6,5 +6,5 @@ var gogApp = angular.module('gogApp', [
     'ngSanitize',
     'gogControllers',
     'timer',
-    'angular-carousel'
+    'flipsnap'
 ]);

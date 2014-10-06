@@ -42,3 +42,7 @@
     cursor: default;
     pointer-events: none;
 }
+[am-button~="small"] {
+    line-height: rem(20px);
+    font-size: rem(10px);
+}

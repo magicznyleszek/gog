@@ -97,20 +97,34 @@
 
         </section>
 
-        <h4>Reach 25.000&hellip;</h4>
+        <section class="slideshow">
 
-        <p>&hellip;to unlock exclusive, never before seen, trailer from Divinity: Original Sin.</p>
+            <div flipsnap flipsnap-id="unlockablesFlipsnap">
+                <div flipsnap-pane ng-repeat="unlockable in bundle.unlockables">
 
-        <div class="slider">
+                    <h4>Reach {{ unlockable.label }}&hellip;</h4>
 
-        </div>
+                    <p>&hellip;to unlock <span ng-bind-html="unlockable.description"></span></p>
 
-        <ul rn-carousel>
-            <li>slide #1</li>
-            <li>slide #2</li>
-            <li>slide #3</li>
-        </ul>
+                    <div am-box="white shadowed padded">
+                        <figure am-background style="background-image: url(https://img.youtube.com/vi/{{ unlockable.youtubeId }}/hqdefault.jpg)"></figure>
+                    </div>
 
-    </div>
+                </div>
+            </div>
+
+            <button am-button="small" ng-click="flipsnap.toPrev()">toPrev()</button>
+
+            <button am-button="small" ng-click="flipsnap.toNext()">toNext()</button>
+
+            <menu>
+                <ol am-list>
+                    <li ng-repeat="unlockable in bundle.unlockables" ng-class="{'active': flipsnap.currentPoint == $index}">
+                        <button am-button="small" ng-click="flipsnap.moveToPoint($index)">{{ unlockable.breakpoint }}</button>
+                    </li>
+                </ol>
+            </menu>
+
+        </section>
 
 </footer>

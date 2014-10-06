@@ -1,0 +1,23 @@
+section.slideshow {
+    [am-background] {
+        width: 100%;
+        height: rem(133px);
+        background-position: center center
+    }
+    [flipsnap-pane] {
+        max-width: rem(320px);
+    }
+    [am-button] {
+        &:not(:first-child):not(:last-child) {
+            @include border-radius(0);
+            border-left-width: 0;
+        }
+        &:first-child:not(:last-child) {
+            @include border-radius(0 0 rem(5px) rem(5px));
+        }
+        &:last-child:not(:first-child) {
+            @include border-radius(rem(5px) rem(5px) 0 0);
+            border-left-width: 0;
+        }
+    }
+}
