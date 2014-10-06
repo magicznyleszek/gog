@@ -8,6 +8,7 @@ section.slideshow {
         background-position: center center
     }
     [flipsnap-pane] {
+        display: inline-block;
         max-width: rem(256px);
         @include box-sizing(border-box);
         padding-left: rem(3px);

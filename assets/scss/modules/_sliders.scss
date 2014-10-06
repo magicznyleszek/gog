@@ -10,8 +10,7 @@
 }
 [am-slider~="hidden"] {
     height: rem(10px);
-    -webkit-appearance: none;
-    background: transparent;
+    @include opacity(0);
     &::-webkit-slider-runnable-track {
         height: rem(12px);
     }
