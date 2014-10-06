@@ -1,0 +1,11 @@
+[am-percent-circle] {
+    width: rem(82px);
+    height: rem(82px);
+    line-height: rem(82px);
+    font-size: rem(25px);
+    font-weight: 700;
+    text-align: center;
+    @include border-radius(50%);
+    background: rgba($black, 0.5);
+    color: $gainsboro;
+}

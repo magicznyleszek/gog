@@ -14,7 +14,9 @@
             <p>&hellip;to unlock <span ng-bind-html="unlockable.description"></span></p>
 
             <div am-box="white shadowed padded">
-                <figure am-background style="background-image: url(https://img.youtube.com/vi/{{ unlockable.youtubeId }}/hqdefault.jpg)"></figure>
+                <figure am-background style="background-image: url(https://img.youtube.com/vi/{{ unlockable.youtubeId }}/hqdefault.jpg)">
+                    <div am-percent-circle ng-if="bundle.sales.length < unlockable.breakpoint">{{ getUnlockablePercent(unlockable.breakpoint) }}</div>
+                </figure>
             </div>
 
         </div>

@@ -3,13 +3,14 @@
 
 ## Todo
 
-- slideshow unavailable pane percent graph
+- percent-circle module animated graph bar
 - slider form speech box final shape
 - slider breakpoints labels position for special overlapping cases
 - icon styles for svg icons
 - bundle price form validation
 - cross-browser testing and fallbacks
 - mass sales popuplating function for demo purposes
+- animations
 - mobile styles
 
 
@@ -23,6 +24,7 @@ Issues:
 Notes:
 
 - the site is run on AngularJS with content and settings defined in `.json` data files
+- there are 9999 randomly generated sales, to show the change in slideshow unlockables, so to see the change in slider breakpoints checkout with some edgy values
 - checkout button updates the sales array
 - some misc plugins:
     - [angular-timer](https://github.com/siddii/angular-timer) by Siddique Hameed

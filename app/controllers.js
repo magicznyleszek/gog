@@ -200,6 +200,20 @@ gogControllers.controller('BundleController', ['$scope', 'Bundle', function ($sc
         return average;
     };
 
+    // returns the percent of breakpoint reached
+    $scope.getUnlockablePercent = function (breakpoint) {
+        // declarations
+        var percent;
+        // check if already reached
+        if ($scope.bundle.sales.length >= breakpoint) {
+            percent = 100;
+        } else {
+            percent = Math.floor($scope.bundle.sales.length / breakpoint * 100);
+        }
+        percent += '%';
+        return percent;
+    };
+
     // for updating sales amount for counter
     $scope.updateSalesDigits = function () {
         $scope.bundle.salesDigits = $scope.getDigits($scope.bundle.sales.length);
