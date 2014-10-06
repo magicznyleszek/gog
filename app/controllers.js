@@ -17,8 +17,6 @@ gogControllers.controller('BundleController', ['$scope', 'Bundle', function ($sc
     $scope.bundle.sales = Bundle.getSales();
     $scope.bundle.slider = Bundle.getSlider();
 
-    console.info($scope.bundle);
-
     // checks if given game is available
     $scope.checkGamesAvailability = function () {
         // declarations

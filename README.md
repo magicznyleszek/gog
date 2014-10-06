@@ -5,6 +5,7 @@
 
 - slideshow unavailable pane percent graph
 - slider form speech box final shape
+- slider breakpoints labels position for special overlapping cases
 - icon styles for svg icons
 - bundle price form validation
 - cross-browser testing and fallbacks
@@ -21,7 +22,8 @@ Issues:
 
 Notes:
 
-- the site is run on AngularJS with most content defined in `.json` data files
+- the site is run on AngularJS with content and settings defined in `.json` data files
+- checkout button updates the sales array
 - some misc plugins:
     - [angular-timer](https://github.com/siddii/angular-timer) by Siddique Hameed
     - [angular-flipsnap](https://github.com/ninjatronic/angular-flipsnap) by Pete Martin
